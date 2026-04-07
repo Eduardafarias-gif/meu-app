@@ -1,47 +1,83 @@
 body {
     margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    /* Fundo azul degradê escuro e moderno */
+    font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #0f172a, #1e293b);
-    background-attachment: fixed; 
-    background-size: cover;
     color: white;
     text-align: center;
-    overflow-x: hidden;
-    animation: entradaGeral 1.2s ease-out;
+    animation: fadeIn 1.5s ease;
 }
 
-/* Estilo da Foto de Perfil */
-.foto {
-    width: 180px;         /* Tamanho da foto */
-    height: 180px;        /* Mesma altura para ser um círculo perfeito */
-    border-radius: 50%;   /* O segredo para ficar redonda */
-    object-fit: cover;    /* Não deixa a imagem esticar */
-    border: 4px solid #00d2ff; /* Borda azul clara brilhante */
-    margin: 20px 0;
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.3); /* Sombra para dar profundidade */
+/* ANIMAÇÃO DE ENTRADA */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Estilo dos Links */
+header {
+    background: rgba(30, 41, 59, 0.8);
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    animation: slideDown 1s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+    animation: glow 2s infinite alternate;
+}
+
+/* EFEITO BRILHO NO NOME */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #3b82f6;
+    }
+    to {
+        text-shadow: 0 0 20px #3b82f6;
+    }
+}
+
+.links {
+    margin-top: 15px;
+}
+
+/* BOTÕES COM ANIMAÇÃO */
 .links a {
-    color: #00d2ff;
     text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    border: 1px solid #00d2ff;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: 0.3s;
+    color: white;
+    background: #3b82f6;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 8px;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 
+/* HOVER BONITO */
 .links a:hover {
-    background-color: #00d2ff;
-    color: #0f172a;
+    background: #2563eb;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #3b82f6;
 }
 
-/* Animações */
-@keyframes entradaGeral {
-    0% { opacity: 0; transform: translateY(30px); }
-    100% { opacity: 1; transform: translateY(0); }
+main {
+    margin-top: 40px;
+    padding: 20px;
+    animation: fadeIn 2s ease;
 }
