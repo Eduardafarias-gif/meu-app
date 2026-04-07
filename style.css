@@ -1,32 +1,36 @@
+/* ===== RESET ===== */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0f172a;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
     color: white;
     text-align: center;
+    overflow-x: hidden;
+
+    animation: entradaGeral 1.2s ease-out;
 }
-/* https://www.reddit.com/r/needforspeed/comments/10gjfr0/yall_think_well_ever_get_a_brian_oconner_type/?tl=pt-br */
-@keyframes entrada{
-    from {
+
+/* ===== ANIMAÇÃO GERAL ===== */
+@keyframes entradaGeral {
+    0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: scale(0.8) translateY(100px);
     }
-    to {
+    100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: scale(1) translateY(0);
     }
 }
 
+/* ===== HEADER ===== */
 header {
-    background: rgba(30, 41, 59, 0.8);
     padding: 20px;
-    backdrop-filter: blur(10px);
-    animation: slideDown 1s ease;
+    animation: descer 1s ease;
 }
 
-@keyframes BRILHOFORTE {
+@keyframes descer {
     from {
-        transform: translateY(-50px);
+        transform: translateY(-80px);
         opacity: 0;
     }
     to {
@@ -35,47 +39,104 @@ header {
     }
 }
 
+/* ===== NOME COM SUPER BRILHO ===== */
 h1 {
     margin: 0;
-    font-size: 28px;
-    animation: glow 2s infinite alternate;
+    font-size: 30px;
+    animation: brilhoNeon 1.5s infinite alternate;
 }
-@keyframes glow { 
 
-}
-    from {
+@keyframes brilhoNeon {
+    0% {
         text-shadow: 0 0 5px #3b82f6;
     }
-    to{text-shadow: 0 0 20px #3b82f6;}
-header {
-    background: #1e293b;
-    padding: 20px;
+    100% {
+        text-shadow: 0 0 25px #3b82f6, 0 0 50px #3b82f6;
+    }
 }
 
-h1 {
-    margin: 0;
-}
-
-.links {
+/* ===== FOTO ===== */
+.foto {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
     margin-top: 15px;
+    border: 3px solid #3b82f6;
+    object-fit: cover;
+
+    animation: girarEntrar 1s ease;
+    transition: 0.4s;
 }
 
+/* FOTO ENTRANDO GIRANDO */
+@keyframes girarEntrar {
+    0% {
+        transform: scale(0) rotate(360deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotate(0);
+        opacity: 1;
+    }
+}
+
+/* EFEITO HOVER NA FOTO */
+.foto:hover {
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: 0 0 30px #3b82f6;
+}
+
+/* ===== LINKS ===== */
+.links {
+    margin-top: 20px;
+}
+
+/* BOTÕES */
 .links a {
     text-decoration: none;
     color: white;
-    background: #3b82f6;
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 8px;
+    background: linear-gradient(45deg, #3b82f6, #2563eb);
+    padding: 12px 18px;
+    margin: 6px;
+    border-radius: 10px;
     display: inline-block;
+
+    animation: subirBotoes 1s ease;
     transition: 0.3s;
 }
 
-.links a:hover {
-    background: #2563eb;
+/* BOTÕES ENTRANDO */
+@keyframes subirBotoes {
+    from {
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
+/* HOVER DOS BOTÕES */
+.links a:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px #3b82f6;
+}
+
+/* ===== TEXTO ===== */
 main {
     margin-top: 40px;
     padding: 20px;
+    animation: aparecerTexto 2s ease;
+}
+
+@keyframes aparecerTexto {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
