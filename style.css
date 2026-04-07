@@ -3,13 +3,10 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: rgb(255, 255, 255);
+    color:white
     text-align: center;
     overflow-x: hidden;
     background-image: url("https://ibb.co/CpjkzmLy");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 
     animation: entradaGeral 1.2s ease-out;
 }
