@@ -18,6 +18,12 @@ body {
         transform: translateY(0);
     }
 }
+ .container {
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+  animation: aparecer 0.8s ease;
+}
 
 header {
     background: rgba(30, 41, 59, 0.8);
