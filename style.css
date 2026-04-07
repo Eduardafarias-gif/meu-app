@@ -6,6 +6,10 @@ body {
     color: white;
     text-align: center;
     overflow-x: hidden;
+    background-image: url("https://ibb.co/CpjkzmLy");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
     animation: entradaGeral 1.2s ease-out;
 }
@@ -56,7 +60,7 @@ h1 {
 }
 
 /* ===== FOTO ===== */
-.foto { 
+.foto {
     width: 140px;
     height: 140px;
     border-radius: 50%;
