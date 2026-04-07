@@ -40,15 +40,13 @@ h1 {
     font-size: 28px;
     animation: glow 2s infinite alternate;
 }
+@keyframes glow { 
 
-/* EFEITO BRILHO NO NOME */
-@keyframes glow {
+}
     from {
         text-shadow: 0 0 5px #3b82f6;
     }
-    to {
-        text-shadow: 0 0 20px #3b82f6;
-
+    to{text-shadow: 0 0 20px #3b82f6;}
 header {
     background: #1e293b;
     padding: 20px;
