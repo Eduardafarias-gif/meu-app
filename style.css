@@ -6,7 +6,7 @@ body {
     text-align: center;
 }
 /* https://www.reddit.com/r/needforspeed/comments/10gjfr0/yall_think_well_ever_get_a_brian_oconner_type/?tl=pt-br */
-@keyframes fadeIn {
+@keyframes entrada{
     from {
         opacity: 0;
         transform: translateY(30px);
@@ -24,7 +24,7 @@ header {
     animation: slideDown 1s ease;
 }
 
-@keyframes slideDown {
+@keyframes BRILHOFORTE {
     from {
         transform: translateY(-50px);
         opacity: 0;
